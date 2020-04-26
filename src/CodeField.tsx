@@ -57,7 +57,7 @@ const CodeField = (
       });
     },
   );
-
+  const onKeyPress=props.onKeyPress?props.onKeyPress:null;
   return (
     <RootComponent {...RootProps} style={getStyle(styles.root, rootStyle)}>
       {cells}
@@ -77,6 +77,7 @@ const CodeField = (
         onFocus={handleOnFocus}
         style={getStyle(styles.textInput, textInputStyle)}
         ref={ref}
+        onKeyPress={onKeyPress}
       />
     </RootComponent>
   );
